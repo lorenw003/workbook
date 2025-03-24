@@ -21,42 +21,42 @@
 /*FONT*/
 @font-face {
     font-family: 'PPMori';
-    src: url('/fonts/PPMori-Regular.otf') format('woff2');
+    src: url('fonts/PPMori-Regular.otf') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PPMori';
-    src: url('/fonts/PPMori-SemiBold.otf') format('woff2');
+    src: url('fonts/PPMori-SemiBold.otf') format('woff2');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PPMori';
-    src: url('/fonts/PPMori-Extralight.otf') format('woff2');
+    src: url('fonts/PPMori-Extralight.otf') format('woff2');
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'PPMori';
-    src: url('/fonts/PPMori-RegularItalic.otf') format('woff2');
+    src: url('fonts/PPMori-RegularItalic.otf') format('woff2');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'PPMori';
-    src: url('/fonts/PPMori-SemiBoldItalic.otf') format('woff2');
+    src: url('fonts/PPMori-SemiBoldItalic.otf') format('woff2');
     font-weight: 800;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'PPMori';
-    src: url('/fonts/PPMori-ExtralightItalic.otf') format('woff2');
+    src: url('fonts/PPMori-ExtralightItalic.otf') format('woff2');
     font-weight: 100;
     font-style: italic;
 }
