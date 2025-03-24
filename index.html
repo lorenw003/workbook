@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>My Funny Little Workbook</title>
+    <style>
+        .row {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
+        }
+
+        .row > div {
+            width: auto;
+            min-height: 10vh;
+        }
+
+        .row > div > img  {
+            object-fit: cover;
+            height: 10vh;
+            width: auto;
+        }
+
+
+        .slide {
+            display:none;
+        }
+
+        .demo {
+            opacity: 0.6;
+            object-fit: cover;
+            height: 20vh;
+            width: auto;
+
+        }
+
+        .demo:hover {
+            opacity: 1;
+        }
+
+        .demo:hover {
+            opacity: 1;
+        }
+
+        .test {
+            height: 70vh;
+            /*background-color: aquamarine;*/
+
+            padding: 0 1em 0 1em;
+        }
+        
+        .container {
+            height: 95%;
+        }
+
+        .row > div {
+            position: relative;
+            text-align: left;
+        }
+
+        .row > div > p {
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+
+            display: none;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .row > div:hover > p {
+            display: block;
+        }
+
+
+        header {
+            padding: 1.5em 0 0 1em;
+            height: 5vh;
+        }
+    </style>
+</head>
+<body class="full-screen flex-column space-between">
+    <header class="flex-row space-between">
+        <h3>interactive media</h3>
+        <p>loren wilson</p>
+    </header>
+    <section class="container flex-column">
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 1: </b></i>This was our first week and introduction to interactive media and WWW. We considered their meaning through how we interact with them - gestures - and their structure or anatomy. We set up VS code and got started exploring html.</p>
+                    <p><i>Some things that inspired me…</i>Mosiac Virus, Myriad, Glitch Textiles, Maria Szakats</p>
+                    <p><i>Things I learned…</i>how to set up a html page, basic html structure</p>
+                </div>
+                <img class="scale-img" src="images/week1Website.png">
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <img class="scale-img" src="images/week2Website2.png">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 2: </b></i>This week we considered how the web has evolved overtime resulting in many different design styles and layouts. We began our own designs starting ideation and learning how to design for the web physically - prototypes - and digitally. </p>
+                    <p><i>Some things that inspired me…</i>Spellverse, Movie Palace Online, 45 Denim Kurata</p>
+                    <p><i>Things I learned…</i>paper and modular prototyping, crazy eights, githhub</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 3: </b></i>This week focused on learning how to publish to the WWW specifically considering grid (layout), responsive design and typography. These considerations informed the personalisation of our workbooks including learning how to use new html tags and css. As well as personal research for our unique visions. </p>
+                    <p><i>Some things that inspired me…</i>Parametro studios, Antione Wodniack, Agorespace</p>
+                    <p><i>Things I learned…</i>responsive/fluid design, media queries, variable fonts, custom fonts, audio, video</p>
+                </div>
+                <img class="scale-img" src="images/Week3Website2.png">
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <img class="scale-img" src="images/Week4Website1.png">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 4: </b></i> I know it’s fun to try to skip ahead, but this week has happened yet so I can’t tell you what I’ll learn or what you’ll. Go make a time machine instead. </p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 5: </b></i> Again, really! You should know there's nothing here!</p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 6: </b></i> It's not even mid sem yet, do you really think I'm this ahead</p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 7: </b></i> Do you just like hovering over things. Why are you here! Go back to week 3!</p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 8: </b></i> It's week 4 not 8. Wait is it!?</p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 9: </b></i> Oh to be in week 9! Future me is gonna be so stressed writing this. So stop trying to skip ahead let her have some time. </p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 10: </b></i> Week 10! Really stop trying to jump the gun!</p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 11: </b></i> Okay rule breaker! Trying to test me or something. I can't tell you the future...it's secret.</p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+            </div>
+        </div>
+        <div class="slide test">
+            <div class="flex-row space-between">
+                <img class="scale-img" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif">
+                <div class="flex-column gap-xs">
+                    <p><i><b>Week 12: </b></i> I wish I was at this stage. I just want to go on holiday already.</p>
+                    <p><i>Some things that inspired me…</i>how should I know</p>
+                    <p><i>Things I learned…</i>hopefully something</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <a href="./week1/index.html">
+                    <img class="demo cursor" src="images/week1Website.png" width="100%">
+                </a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./week2/index.html"><img class="demo cursor" src="images/week2Website2.png" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./week3/index.html"><img class="demo cursor" src="images/Week3Website2.1.png" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="images/Week4Website1.png" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+            <div>
+                <a href="./error.html"><img class="demo cursor" src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" width="100%"></a>
+                <p class="text">Click to learn more...</p>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+    var mydemos = document.getElementsByClassName("demo");
+    var myslides = document.getElementsByClassName("slide")
+
+    function checkIndex(array, element) {
+        for (i=0; i < array.length; i++) {
+            if(array[i]==element) {
+                return i; 
+            }
+        }
+    }
+
+    
+    for (var i = 0; i < mydemos.length; i++) {
+        mydemos[i].addEventListener('mouseenter', showSlide);
+        mydemos[i].addEventListener('mouseout', resetSlide);
+    }
+    
+    function showSlide(evt) {
+        let index = checkIndex(mydemos, evt.target);
+
+        let slide = myslides[index];
+        slide.style.display = "block";
+    }
+
+    function resetSlide () {
+        for (i = 0; i < myslides.length; i++) {
+                myslides[i].style.display = "none";
+        }
+
+    }
+</script>
+</html>

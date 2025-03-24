@@ -1,0 +1,224 @@
+:root {
+    /*SPACING*/
+   --spacing-base-size: 1em;
+   --spacing-scale-ratio: 1.2;
+
+   --spacing-xs: calc((var(--spacing-base-size)/var(--spacing-scale-ratio)));
+   --spacing-sm: var(--spacing-base-size);
+   --spacing-md: calc(var(--spacing-base-size) * var(--spacing-scale-ratio));
+   --spacing-lg: calc(var(--spacing-base-size)* var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
+   --spacing-xl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
+   --spacing-xxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
+   --spacing-xxxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
+   --spacing-xxxxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
+   --spacing-xxxxxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
+   --spacing-xxxxxxl: calc(var(--spacing-base-size) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio) * var(--spacing-scale-ratio));
+
+   /*COLOURS*/
+   --colour-callout: #F8F8F7;
+}
+
+/*FONT*/
+@font-face {
+    font-family: 'PPMori';
+    src: url('/fonts/PPMori-Regular.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPMori';
+    src: url('/fonts/PPMori-SemiBold.otf') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPMori';
+    src: url('/fonts/PPMori-Extralight.otf') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PPMori';
+    src: url('/fonts/PPMori-RegularItalic.otf') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PPMori';
+    src: url('/fonts/PPMori-SemiBoldItalic.otf') format('woff2');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'PPMori';
+    src: url('/fonts/PPMori-ExtralightItalic.otf') format('woff2');
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.5rem;
+
+    font-family: "PPMori";
+
+    margin: 2em auto 4em auto;
+    max-width: 65vw;
+}
+
+.full-screen {
+    min-height: 100vh;
+    max-height: 100vh;
+    max-width: 100vw;
+    
+    margin: 0;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-row > * {
+    margin-right: 1em;
+}
+
+.flex-row > img{
+   width:fit-content;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.callout {
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    background-color: var(--colour-callout);
+}
+.back_button {
+    padding:0.5em 1em 0.5em 1em;
+    border-radius: 0.1em;
+
+    font-size: small;
+    font-family: "PPMori";
+}
+.gallery {
+    justify-content: space-around;
+
+    margin: 1em 0 1em 0;
+    overflow-x: scroll;
+}
+.gallery > div {
+    min-width: 10vw;
+    height:auto;
+    border-radius: 0.25em;
+    padding: 2em 3em 2em 3em;
+    margin: 0 2em 0 0;
+
+    background-image: url("images/week1Tags.HEIC");
+    background-size: 100% 100%;
+}
+.gallery > div > h2 {
+    text-align: center;
+    color: white;
+}
+
+
+/*GAPS*/
+.gap-xs {
+    gap:var(--spacing-xs);
+}
+
+.gap-sm {
+    gap:var(--spacing-sm);
+}
+
+.gap-md {
+    gap:var(--spacing-md);
+}
+
+.gap-lg {
+    gap:var(--spacing-lg);
+}
+
+.gap-xl {
+    gap:var(--spacing-xl);
+}
+
+.gap-xxl {
+    gap:var(--spacing-xxl);
+}
+
+.gap-xxxl {
+    gap:var(--spacing-xxxl);
+}
+
+/*IMAGES*/
+.standard-img {
+    width: auto;
+    max-width: 70vw;
+    min-width: 20vw;
+
+    max-height: 40vh;
+    object-fit: cover;
+}
+
+.scale-img {
+    width: auto;
+    max-width: 30vw;
+    min-width: 20vw;
+    object-fit: scale-down;
+}
+
+iframe {
+    border: none;
+    padding: 0;
+
+    display: block;
+    overflow: hidden;
+}
+li{
+    margin-left:var(--spacing-md);
+}
+a {
+    color: black;
+    text-decoration-line: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+button {
+    padding:0.5em 1em 0.5em 1em;
+    border-radius: 0.5em;
+
+    font-size: small;
+    font-family: "PPMori";
+}
+
+button:hover {
+    border-radius: 0.5em;
+}
