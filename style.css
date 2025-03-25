@@ -103,6 +103,14 @@ body {
     flex-direction: column;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap > div {
+    min-width: 30%;
+}
+
 .space-between {
     justify-content: space-between;
 }
