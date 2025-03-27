@@ -264,9 +264,15 @@
     </section>
 </body>
 <script>
+    //This codes was inspired by the code from WW3 Schools for a slideshow gallery (https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp). But adapted to include event listeners, a different layout for slides and hover rather than click activation.
+
+    //Creates arrays of thumbnails
     var mydemos = document.getElementsByClassName("demo");
+
+     //Creates arrays of slides
     var myslides = document.getElementsByClassName("slide")
 
+    //Checks the index number of the thumbnail that was hovered over
     function checkIndex(array, element) {
         for (i=0; i < array.length; i++) {
             if(array[i]==element) {
@@ -275,12 +281,13 @@
         }
     }
 
-    
+    //Adds an event listener to every thumbnail for when users hover or leave a thumbnail
     for (var i = 0; i < mydemos.length; i++) {
         mydemos[i].addEventListener('mouseenter', showSlide);
         mydemos[i].addEventListener('mouseout', resetSlide);
     }
     
+    //Checks which thumbnails was hovered over and finds the corresponding slide to display 
     function showSlide(evt) {
         let index = checkIndex(mydemos, evt.target);
 
@@ -288,6 +295,7 @@
         slide.style.display = "block";
     }
 
+    //Resets the slide content to hidden when users mouse leaves the thumbnail
     function resetSlide () {
         for (i = 0; i < myslides.length; i++) {
                 myslides[i].style.display = "none";
