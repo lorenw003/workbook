@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+
+    <!--LINK TO JS-->
+    <script src="../script.js" async></script>
+
+    <!--LINK FOR FAVICON-->
+    <link rel="icon" type="image/x-icon" href="../images/folder-closed.png">
+
+    <!--LINK TO STYLESHEET-->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .hidden {
+            visibility: hidden;
+        }
+
+        .frame-sm {
+            max-width: 70%;
+            margin: auto;
+            align-items: center;
+        }
+
+        .full-height {
+            min-height: 100vh;
+        }
+
+        .full-width {
+            min-width: 100%;
+        }
+
+        a {
+            color: var(--colour-text);
+        }
+
+        .no-textdecoration {
+            text-decoration: none;
+        }
+
+        .no-textdecoration:hover {
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body class="margin-sides-xxxl full-height flex-column">
+    <section class="frame-sm flex-column gap-xl">
+        <h1>So... you want to access my files?</h1>
+        <div class="flex-row space-between margin-bottom-xxl">
+            <a href="home.html" class="flex-row margin-sides-xl no-textdecoration">
+                <h2 class="hidden pointers">></h2>
+                <h2 class="options">YES</h2>
+            </a>
+            <a href="error.html" class="flex-row margin-sides-xl no-textdecoration">
+                <h2 class="hidden pointers">></h2>
+                <h2 class="options">NO</h2>
+            </a>
+        </div>
+    </section>
+</body>
+<script>
+    let mypointers = document.getElementsByClassName("pointers");
+    let myoptions = document.getElementsByClassName("options");
+
+    function addListeners (array, trigger, after) {
+        for (var i = 0; i < array.length; i++) {
+            array[i].addEventListener(trigger, after)
+            console.log(array[i])
+        }
+    }
+
+    addListeners(myoptions, 'mouseenter', showPointer);
+
+    function showPointer (evt) {
+        for (i = 0; i < mypointers.length; i++) {
+            mypointers[i].style.visibility = 'hidden';
+        }
+
+        let index = checkIndex(myoptions, evt.target);
+        let pointer = mypointers[index];
+
+        pointer.style.visibility = 'visible';
+
+    }
+</script>
+</html>
