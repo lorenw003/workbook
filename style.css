@@ -297,7 +297,7 @@ li{
 }
 
 a {
-    color: black;
+    color: var(--colour-text);
     text-decoration-line: none;
 }
 
