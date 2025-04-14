@@ -282,6 +282,7 @@ body {
 /*IMAGES*/
 .standard-img {
     width: 100%;
+    max-width: 900px;
 }
 
 .regular-img {
@@ -294,6 +295,10 @@ body {
 
 .small-img {
     max-width: 10vw;
+}
+
+.lg-image-max {
+    max-width: 850;
 }
 
 
@@ -311,6 +316,15 @@ body {
 
 .img-div > img, .wide-img-div > img {
     width: 100%;
+}
+
+
+.flex-div-small {
+    width: 30%;
+}
+
+.flex-div-half {
+    width: 50%;
 }
 
 
