@@ -480,14 +480,27 @@ ol {
         /*margin: 0 auto 0 auto;*/
     }
 
+    ol {
+        -webkit-column-count: 1;
+        column-count: 1;
+    }
+
+    .flex-row {
+        flex-direction: column;
+    }
+
+    .two-columns > * {
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 1200px) {
-.flex-row.wide {
-    flex-wrap: wrap;
-}
-.wide-img-div {
-    max-width: 800px;
-    /*margin: 0 auto 0 auto;*/
-}
+    .flex-row.wide {
+        flex-wrap: wrap;
+    }
+    .wide-img-div {
+        max-width: 800px;
+        /*margin: 0 auto 0 auto;*/
+    }
 }
