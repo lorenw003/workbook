@@ -9,6 +9,8 @@
   <script language="javascript" type="text/javascript" src="week4_kusama.js"></script>
   <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
+  <!--LINK TO STYLESHEET-->
+  <link rel="stylesheet" href="../../style.css">
   <style>
     body {
       padding: 0;
@@ -18,5 +20,25 @@
 </head>
 
 <body>
+  <section title="Go back to home directory">
+    <a href="../index.html"><img id="folder-icon" class="icon-open icon-overlay margin-bottom-xxl margin-top-s margin-left-xxl" src="../../images/folder-open.png"></a>
+  </section>
 </body>
+<!--LINK TO JS-->
+<script>
+  //ADDS EVENT LISTENER TO FOLDER ICON FOR WHEN MOUSE IS HOVERING
+  document.getElementById("folder-icon").addEventListener('mouseover', closeFolder);
+  document.getElementById("folder-icon").addEventListener('mouseout', openFolder);
+
+  // Changes folders to closed image when hovered over
+  function closeFolder(evt) {
+      evt.target.src = "../../images/folder-closed.png";
+  }
+
+  // CHange image to open folder when mouse is no longer hovering
+  function openFolder(evt) {
+      evt.target.src = "../../images/folder-open.png";
+  }
+</script>
+
 </html>
