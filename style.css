@@ -92,7 +92,7 @@ body {
 
 }
 
-a, .tabs {
+a, .tabs, .grabber {
     cursor: url(images/cursor-grabber.png), pointer;
 }
 
@@ -365,26 +365,29 @@ iframe {
 
 
 
-/* CUSTOM COMPONENTS */
-.gallery {
-    justify-content: space-around;
-
-    margin: 1em 0 1em 0;
-    overflow-x: scroll;
+/*MAX WIDTH*/
+.text-wrapper-sm {
+    max-width: 40%;
+    margin: auto;
+    align-items: center;
 }
-.gallery > div {
-    min-width: 10vw;
-    height:auto;
-    border-radius: 0.25em;
-    padding: 2em 3em 2em 3em;
-    margin: 0 2em 0 0;
 
-    background-image: url("images/week1Tags.HEIC");
-    background-size: 100% 100%;
+.text-wrapper-xs {
+    max-width: 30%;
+    margin: auto;
+    align-items: center;
 }
-.gallery > div > h2 {
-    text-align: center;
-    color: white;
+
+
+
+
+/*TYPE*/
+.no-textdecoration {
+    text-decoration: none;
+}
+
+.no-textdecoration:hover {
+    text-decoration: none;
 }
 
 
@@ -396,6 +399,17 @@ iframe {
     max-height: 100vh;
 }
 
+.full-height {
+    min-height: 100vh;
+}
+
+.full-width {
+    min-width: 100%;
+}
+
+
+
+
 ol {
     -webkit-column-count: 2;
     column-count: 2;
@@ -405,6 +419,10 @@ ol {
     max-width: 50%;
     min-width: 30%;
 }
+
+
+
+
 
 
 
@@ -471,6 +489,13 @@ ol {
     left: 0;
     z-index: 10;
 }
+
+
+/*VISIBILITY*/
+.hidden {
+    visibility: hidden;
+}
+
 
 
 
