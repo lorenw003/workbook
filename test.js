@@ -149,7 +149,7 @@ function hideControls () {
 }
 
 function redirect() {
-  window.location.href = "../home.html";
+  window.location.href = "home.html";
 }
 
 function draw() {
