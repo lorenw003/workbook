@@ -11,6 +11,7 @@ let messageCompleted;
 let font, yesPointer, noPointer, rowDiv;
 
 function preload() {
+  //LOADIND FONT
   font = loadFont('./data/PressStart2P.ttf');
 }
 
@@ -21,6 +22,7 @@ function setup() {
   let typeDiv = createDiv();
   typeDiv.id("type-div");
   
+  //CREATES DIV AND HTML ELEMENTS TO INTERACT WITH
   rowDiv = createDiv();
   rowDiv.id("row-div");
   rowDiv.addClass("flex-row");
@@ -74,7 +76,7 @@ function setup() {
 
 
 
-//Hides and Shows arrows next to yes and no
+//HIDES AND SHOWS POINTERS NEXT TO YES AND NO
 function showYesPointer() {
   yesPointer.style('visibility', 'visible');
   noPointer.style('visibility', 'hidden');
@@ -85,7 +87,7 @@ function showNoPointer() {
   yesPointer.style('visibility', 'hidden');
 }
 
-
+//CHECKS WHAT MESSAGE SHOULD BE TYPED BASED ON VARIABLE
 function checkMessage() {
   if (messageType === "startMessage") {
     message = "So... you want to access my files";
@@ -138,16 +140,19 @@ function closeMessage () {
   hideControls();
 }
 
+//RESETS TYPE FUNCTION TO ALLOW A NEW MESSAGE TO BE TYPED
 function resetType () {
   index = 0;
   textToShow = '';
   redraw();
 }
 
+// HIDES YES AND NO BUTTONS
 function hideControls () {
   rowDiv.style('display', 'none');
 }
 
+//REDIRECTS TO HOME PAGE
 function redirect() {
   window.location.href = "home.html";
 }
