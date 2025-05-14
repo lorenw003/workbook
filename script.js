@@ -1,3 +1,12 @@
+// COMPARES THE ELEMENT THAT TARGETED AN EVENT WITH ARRAY TO FIND THE MATCHING ELEMENT IN THE ARRAY
+function checkIndex(array, element) {
+    for (i=0; i < array.length; i++) {
+        if(array[i]==element) {
+            return i; 
+        }
+    }
+}
+
 //WEEKS
 let mytitles = document.getElementsByClassName("titles");
 let mycontent = document.getElementsByClassName("content");
@@ -10,22 +19,6 @@ let tab = 0;
 for (var i = 0; i < mytitles.length; i++) {
     mytitles[i].addEventListener('click', checkDisplay);
 }
-
-// // ALIGNS THE TITLES IN ASCENDING TAB LAYOUT
-// for (var i = 0; i < mytitles.length; i++) {
-//     let current = mytitles[i];
-//     // finds width of title
-//     let width = current.offsetWidth + 12;
-
-//     //sets left margin to 0;
-//     current.style.marginLeft = "0px";
-
-//     //sets let margin to tab variable
-//     current.style.marginLeft = tab + "px";
-
-//     //adds width of current title to tab so next item is on right of the current title
-//     tab = tab + width;
-// }
 
 //TAB DISPLAY
 // ALIGNS THE TITLES IN ASCENDING TAB LAYOUT
@@ -42,15 +35,6 @@ for (var i = 0; i < mytitles.length; i++) {
 
     //adds width of current title to tab so next item is on right of the current title
     tab = tab + width;
-}
-
-// COMPARES THE ELEMENT THAT TARGETED AN EVENT WITH ARRAY TO FIND THE MATCHING ELEMENT IN THE ARRAY
-function checkIndex(array, element) {
-    for (i=0; i < array.length; i++) {
-        if(array[i]==element) {
-            return i; 
-        }
-    }
 }
 
 //DROPDOWN
@@ -90,13 +74,6 @@ for (var i = 0; i < mydemos.length; i++) {
     mydemos[i].addEventListener('mouseenter', showSlide);
     mydemos[i].addEventListener('mouseout', resetSlide);
 }
-
-// function checkwindow() {
-//     if (window.innerWidth < 568) {
-//   } else {
-//     console.log ("DEFAULT");
-//   }
-// }
 
 //Checks which thumbnails was hovered over and finds the corresponding slide to display 
 function showSlide(evt) {
@@ -145,6 +122,7 @@ function openFolder(evt) {
     label.style.visibility = "hidden";
 }
 
+//SHOW LABELS
 let labels = document.getElementsByClassName("mylabel")
 let containers = document.getElementsByClassName("icon-container")
 
@@ -168,7 +146,40 @@ function hideLabel(evt) {
 
 
 
+// let myflex = document.getElementsByClassName("icon-component-container");
+// let myicons = document.getElementsByClassName("icon-component");
+
+// for (var i = 0; i < myflex.length; i++) {
+//     myflex[i].addEventListener('mouseover', showIcon);
+// }
+
+// function showIcon(evt) {
+//     let index = checkIndex(myflex, evt.target);
+//     let selected = myicons[index];
+//     console.log(selected);
+//     selected.style.display = "flex";
+// }
+
+// function removeIcon (evt) {
+
+// }
+
  
 
+//OLD
 
+// // ALIGNS THE TITLES IN ASCENDING TAB LAYOUT
+// for (var i = 0; i < mytitles.length; i++) {
+//     let current = mytitles[i];
+//     // finds width of title
+//     let width = current.offsetWidth + 12;
 
+//     //sets left margin to 0;
+//     current.style.marginLeft = "0px";
+
+//     //sets let margin to tab variable
+//     current.style.marginLeft = tab + "px";
+
+//     //adds width of current title to tab so next item is on right of the current title
+//     tab = tab + width;
+// }
