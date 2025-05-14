@@ -145,6 +145,29 @@ function openFolder(evt) {
     label.style.visibility = "hidden";
 }
 
+let labels = document.getElementsByClassName("mylabel")
+let containers = document.getElementsByClassName("icon-container")
+
+for (var i = 0; i < containers.length; i++) {
+    containers[i].addEventListener('mouseout', hideLabel);
+    containers[i].addEventListener('mouseenter', showLabel);
+}
+
+function showLabel(evt) {
+    let index = checkIndex(containers, evt.target);
+    
+    labels[index].style.visibility = "visible";
+}
+
+function hideLabel(evt) {
+    let index = checkIndex(containers, evt.target);
+
+    labels[index].style.visibility = "hidden";
+}
+
+
+
+
  
 
 
