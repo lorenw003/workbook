@@ -374,7 +374,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 iframe {
@@ -455,12 +455,6 @@ ol {
     border: 1px solid white;
 }
 
-.demo {
-    min-width: 65px;
-    max-width: 100px;
-    width: 8vw;
-}
-
 .row {
     width: 100%;
     overflow-x: scroll;
@@ -502,6 +496,12 @@ ol {
 .icon-file {
     width: 7vw;
     min-width: 65px;
+}
+
+.icon-folder {
+    min-width: 65px;
+    max-width: 100px;
+    width: 8vw;
 }
 
 .icon-arrow {
