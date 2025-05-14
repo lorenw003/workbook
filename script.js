@@ -1,25 +1,44 @@
+//WEEKS
 let mytitles = document.getElementsByClassName("titles");
 let mycontent = document.getElementsByClassName("content");
 let mytabs = document.getElementsByClassName("tab");
 
 let tab = 0;
 
+
 // adds an event listener for when user click on a title
 for (var i = 0; i < mytitles.length; i++) {
     mytitles[i].addEventListener('click', checkDisplay);
 }
 
+// // ALIGNS THE TITLES IN ASCENDING TAB LAYOUT
+// for (var i = 0; i < mytitles.length; i++) {
+//     let current = mytitles[i];
+//     // finds width of title
+//     let width = current.offsetWidth + 12;
+
+//     //sets left margin to 0;
+//     current.style.marginLeft = "0px";
+
+//     //sets let margin to tab variable
+//     current.style.marginLeft = tab + "px";
+
+//     //adds width of current title to tab so next item is on right of the current title
+//     tab = tab + width;
+// }
+
+//TAB DISPLAY
 // ALIGNS THE TITLES IN ASCENDING TAB LAYOUT
 for (var i = 0; i < mytitles.length; i++) {
     let current = mytitles[i];
     // finds width of title
-    let width = current.offsetWidth + 12;
+    let width = 8;
 
     //sets left margin to 0;
-    current.style.marginLeft = "0px";
+    current.style.marginLeft = "0%";
 
     //sets let margin to tab variable
-    current.style.marginLeft = tab + "px";
+    current.style.marginLeft = tab + "%";
 
     //adds width of current title to tab so next item is on right of the current title
     tab = tab + width;
@@ -34,6 +53,7 @@ function checkIndex(array, element) {
     }
 }
 
+//DROPDOWN
 // CHECKS THE DISPLAY OF EVENT TARGET ELEMENT TO HIDE OR DISPLAY IT
 function checkDisplay(evt) {
     //calls checkIndex function
@@ -55,6 +75,7 @@ function checkDisplay(evt) {
 
 
 
+//HOMEPAGE
 
 //This codes was inspired by the code from WW3 Schools for a slideshow gallery (https://www.w3schools.com/howto/howto_js_slideshow_gallery.asp). But adapted to include event listeners, a different layout for slides and hover rather than click activation.
 
@@ -70,12 +91,23 @@ for (var i = 0; i < mydemos.length; i++) {
     mydemos[i].addEventListener('mouseout', resetSlide);
 }
 
+// function checkwindow() {
+//     if (window.innerWidth < 568) {
+//   } else {
+//     console.log ("DEFAULT");
+//   }
+// }
+
 //Checks which thumbnails was hovered over and finds the corresponding slide to display 
 function showSlide(evt) {
+    console.log(window.innerWidth);
     let index = checkIndex(mydemos, evt.target);
     let slide = myslides[index];
 
-    slide.style.display = "block";
+    if (window.innerWidth > 568) {
+        slide.style.display = "block";
+    } else {
+    }
 
     // Changes image to show open folder
     evt.target.src = "images/folder-open.png";
@@ -93,21 +125,27 @@ function resetSlide () {
 
 }
 
-
-
+   
+//FOLDER OPEN
 //ADDS EVENT LISTENER TO FOLDER ICON FOR WHEN MOUSE IS HOVERING
 document.getElementById("folder-icon").addEventListener('mouseover', closeFolder);
 document.getElementById("folder-icon").addEventListener('mouseout', openFolder);
 
+let label = document.getElementById('icon-label');
+
 // Changes folders to closed image when hovered over
 function closeFolder(evt) {
     evt.target.src = "../images/folder-closed.png";
+    label.style.visibility = "visible";
 }
 
 // CHange image to open folder when mouse is no longer hovering
 function openFolder(evt) {
     evt.target.src = "../images/folder-open.png";
+    label.style.visibility = "hidden";
 }
+
+ 
 
 
 

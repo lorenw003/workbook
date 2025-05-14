@@ -109,6 +109,10 @@ a, .tabs, .grabber {
     margin-right: 1em;
 }
 
+.flex-row > .demo {
+    margin-right: 0;
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -138,8 +142,22 @@ a, .tabs, .grabber {
     margin: 0 auto 0 auto;
 }
 
+.align-centre-vertical {
+    margin: auto 0 auto 0;
+}
+
 .justify-centre {
     justify-content: center;
+}
+
+.align-left {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.align-top {
+    margin-top: 0;
+    margin-bottom: auto;
 }
 
 
@@ -206,6 +224,7 @@ a, .tabs, .grabber {
 
 
 
+
 /*PADDING*/
 /* Sides: padding left and right*/
 .padding-sides-sm {
@@ -254,6 +273,10 @@ a, .tabs, .grabber {
 
 
 /*GAPS*/
+.gap-none {
+    gap:0;
+}
+
 .gap-xs {
     gap:var(--spacing-xs);
 }
@@ -433,6 +456,8 @@ ol {
 }
 
 .demo {
+    min-width: 65px;
+    max-width: 100px;
     width: 8vw;
 }
 
@@ -473,14 +498,14 @@ ol {
     padding: 1em 0.5em 1em 0.5em;
 }
 
-.icon-open {
-    width: 8vw;
-    min-width: 70px;
-}
 
 .icon-file {
     width: 7vw;
     min-width: 65px;
+}
+
+.icon-arrow {
+    width: 40px;
 }
 
 .icon-overlay {
@@ -491,9 +516,14 @@ ol {
 }
 
 
+
 /*VISIBILITY*/
 .hidden {
     visibility: hidden;
+}
+
+.no-display {
+    display: none;
 }
 
 
@@ -516,12 +546,12 @@ ol {
         column-count: 1;
     }
 
-    .flex-row {
+    .flex-row.two-columns {
         flex-direction: column;
     }
 
     .two-columns > * {
-        width: 100%;
+        max-width: 100%;
     }
 
 }
@@ -533,5 +563,43 @@ ol {
     .wide-img-div {
         max-width: 800px;
         /*margin: 0 auto 0 auto;*/
+    }
+}
+
+@media (max-width: 568px) {
+    .home.space-between {
+        justify-content: left;
+    }
+
+    .row.flex-row {
+        flex-direction: column;
+    }
+
+    .home.flex-row {
+        margin-left: var(--spacing-xxl);
+    }
+
+    .demo.margin-left-xxl {
+        margin-left: 0;
+    }
+
+    .icon-arrow.no-display {
+        display: flex;
+    }
+
+    .align-centre-vertical.no-display {
+        display: flex;
+    }
+
+    .full-screen.margin-sides-xxl {
+        margin-left: var(--spacing-lg);
+        margin-right: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 400px) {
+    .full-screen.margin-sides-xxl {
+        margin-left: var(--spacing-sm);
+        margin-right: var(--spacing-sm);
     }
 }
