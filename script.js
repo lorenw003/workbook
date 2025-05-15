@@ -108,40 +108,36 @@ function resetSlide () {
 document.getElementById("folder-icon").addEventListener('mouseover', closeFolder);
 document.getElementById("folder-icon").addEventListener('mouseout', openFolder);
 
-let label = document.getElementById('icon-label');
-
 // Changes folders to closed image when hovered over
 function closeFolder(evt) {
     evt.target.src = "../images/folder-closed.png";
-    label.style.visibility = "visible";
 }
 
 // CHange image to open folder when mouse is no longer hovering
 function openFolder(evt) {
     evt.target.src = "../images/folder-open.png";
-    label.style.visibility = "hidden";
 }
 
 //SHOW LABELS
-let labels = document.getElementsByClassName("mylabel")
-let containers = document.getElementsByClassName("icon-container")
+// let labels = document.getElementsByClassName("mylabel")
+// let containers = document.getElementsByClassName("icon-container")
 
-for (var i = 0; i < containers.length; i++) {
-    containers[i].addEventListener('mouseout', hideLabel);
-    containers[i].addEventListener('mouseenter', showLabel);
-}
+// for (var i = 0; i < containers.length; i++) {
+//     containers[i].addEventListener('mouseout', hideLabel);
+//     containers[i].addEventListener('mouseenter', showLabel);
+// }
 
-function showLabel(evt) {
-    let index = checkIndex(containers, evt.target);
+// function showLabel(evt) {
+//     let index = checkIndex(containers, evt.target);
     
-    labels[index].style.visibility = "visible";
-}
+//     labels[index].style.visibility = "visible";
+// }
 
-function hideLabel(evt) {
-    let index = checkIndex(containers, evt.target);
-
-    labels[index].style.visibility = "hidden";
-}
+// function hideLabel(evt) {
+//     let index = checkIndex(containers, evt.target);
+//     console.log(evt.target);
+//     labels[index].style.visibility = "hidden";
+// }
 
 
 

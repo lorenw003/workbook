@@ -551,6 +551,16 @@ ol {
 }
 
 
+/* HOVER */
+.icon-container:hover > .icon-label {
+    visibility: visible;
+}
+
+.icon-container> .icon-label {
+    visibility: hidden;
+}
+
+
 
 
 
@@ -602,6 +612,20 @@ ol {
 
     .home.flex-row {
         margin-left: var(--spacing-xxl);
+    }
+
+    .mobile-column.flex-column {
+        flex-direction: row;
+        gap: var(--spacing-sm);
+        margin-left: 0;
+    }
+
+    .icon-container > .icon-label {
+        visibility: visible;
+    }
+
+    .align-centre.mobile-align-centre-vertical{
+        margin: auto 0 auto 0;
     }
 
     .demo.margin-left-xxl {
