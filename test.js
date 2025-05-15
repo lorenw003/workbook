@@ -16,7 +16,7 @@ function preload() {
 }
 
 function setup() {
-  let canvas = createCanvas(windowWidth, windowHeight/2.3);
+  let canvas = createCanvas(windowWidth, windowHeight/2);
   textFont(font);
   
   let typeDiv = createDiv();
@@ -94,14 +94,14 @@ function checkMessage() {
   } else if (messageType === "requestAccess") {
     message = "Requesting Access to GDES20008LW";
   } else if (messageType === "noRequest")
-    message = "Program closed";
+    message = "Program closed, Goodbye!";
 }
 
 
 function typeMessage () {
   //This code was taken and modified from https://editor.p5js.org/xc2736/sketches/1igkPpfX5
   
-  textSize(20);
+  textSize(resizeText(4));
   fill("white");
   text(textToShow, width/3.5, height - 30);
   frameRate(30); 
@@ -157,10 +157,24 @@ function redirect() {
   window.location.href = "home.html";
 }
 
+
+//RESIZES TEXT FOR BROWSER
+function resizeText(baseTextSize) {
+  scaleFactor = width/300;
+  return baseTextSize * scaleFactor;
+  //map function
+  //or add if
+}
+
+
 function draw() {
   background(33,33,33);
   
   checkMessage();
   
   typeMessage();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight/2.3);
 }
