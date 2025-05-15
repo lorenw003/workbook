@@ -77,7 +77,6 @@ for (var i = 0; i < mydemos.length; i++) {
 
 //Checks which thumbnails was hovered over and finds the corresponding slide to display 
 function showSlide(evt) {
-    console.log(window.innerWidth);
     let index = checkIndex(mydemos, evt.target);
     let slide = myslides[index];
 
