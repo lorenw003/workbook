@@ -199,6 +199,10 @@ a, .tabs, .grabber {
     margin-top: var(--spacing-sm);
 }
 
+.margin-top-md {
+    margin-top: var(--spacing-md);
+}
+
 .margin-top-xxl {
     margin-top: var(--spacing-xxl);
 }
@@ -229,6 +233,10 @@ a, .tabs, .grabber {
     margin-left: var(--spacing-lg);
 }
 
+/* Top and Bottom */
+.margin-tb-xl {
+    margin: var(--spacing-xl) 0 var(--spacing-xl) 0;
+}
 
 
 
@@ -503,24 +511,32 @@ ol {
 
 .tab {
     padding: 1em 0 0 0;
-    border-bottom: 1px solid whitesmoke;
+}
+
+.tab:not(:first-child){
+    border: 1px solid whitesmoke;
+    border-bottom: none;
+    border-radius: 0.5em 0.5em 0 0;
 }
 
 .content {
     display: none;
-    padding: 1em 0.5em 1em 0.5em;
+    padding: 1em 1.5em 1em 1.5em;
+    border: 1px solid whitesmoke;
+    border-bottom: none;
+    border-radius: 0.5em 0.5em 0 0;
 }
 
+.content:last-child {
+    border-bottom:  1px solid whitesmoke;
+}
 
 .icon-file {
-    width: 7vw;
-    min-width: 65px;
+    width: 85px;
 }
 
 .icon-folder {
-    min-width: 65px;
-    max-width: 100px;
-    width: 8vw;
+    width: 90px;
 }
 
 .icon-arrow {
@@ -551,6 +567,7 @@ ol {
 }
 
 
+
 /* HOVER */
 .icon-container:hover > .icon-label {
     visibility: visible;
@@ -561,10 +578,46 @@ ol {
 }
 
 
+/* CSS ANIMATION */
+@keyframes expandWidth {
+    from { width: 0%; }
+    to { width: 100%; }
+}  
+
+.progress-bar {
+    background-color: white;
+    height: 100%;
+    animation: expandWidth 4s ease-in-out 1;
+}
+
+.progress-div {
+    width: 40vw;
+    height: 3vh;
+    margin: 0;
+} 
+
+.progress-container {
+    padding: 0.5rem;
+    border: 1px solid whitesmoke;
+    width: fit-content;
+}
+
 
 
 
 /*MEDIA QUERIES*/
+@media (max-width: 1200px) {
+    .flex-row.wide {
+        flex-wrap: wrap;
+    }
+
+    .wide-img-div {
+        max-width: 800px;
+        /*margin: 0 auto 0 auto;*/
+    }
+}
+
+
 @media (max-width: 1000px) {
     .flex-row.portrait {
         flex-wrap: wrap;
@@ -590,18 +643,54 @@ ol {
 
 }
 
-@media (max-width: 1200px) {
-    .flex-row.wide {
-        flex-wrap: wrap;
+@media (max-width:900px) {
+    .icon-folder {
+    width: 85px;
     }
 
-    .wide-img-div {
-        max-width: 800px;
-        /*margin: 0 auto 0 auto;*/
+    .icon-file {
+    width: 80px;
     }
 }
 
+@media (max-width:800px) {
+    .icon-folder {
+    width: 80px;
+    }
+    
+    .icon-file {
+    width: 78px;
+    }
+}
+
+@media (max-width:700px) {
+    .icon-folder {
+    width: 78px;
+}
+    .icon-file {
+    width: 75px;
+    }
+}
+
+@media (max-width:600px) {
+    .icon-folder {
+    width: 72px;
+}
+    .icon-file {
+    width: 70px;
+    }
+}
+
+
 @media (max-width: 568px) {
+    .icon-folder {
+    width: 65px;
+    }
+
+    .icon-file {
+    width: 65px;
+    }
+
     .home.space-between {
         justify-content: left;
     }
