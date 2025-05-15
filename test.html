@@ -10,77 +10,66 @@
 
     <!--LINK TO STYLESHEET-->
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        @keyframes expandWidth {
+            from { width: 0%; }
+            to { width: 100%; }
+        }  
+
+        .progress-bar {
+            background-color: white;
+            height: 100%;
+            animation: expandWidth 4s ease-in-out 1;
+        }
+
+        .progress-div {
+            width: 40vw;
+            height: 3vh;
+            margin: 0;
+        } 
+        
+        .progress-container {
+            padding: 0.25rem;
+            border: 1px solid whitesmoke;
+            width: fit-content;
+        }
+
+        .css-typing {
+
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);   
+        }
+
+        @keyframes closeModal {
+            0% {opacity:1;}
+            90% {opacity:1;}
+            100% {opacity:0;}
+        }
+
+        .square {
+             background-color: blue;
+             width: 20vw;
+             height: 20px;
+             animation: closeModal 4s ease-in 1;
+        }
+
+    </style>
 </head>
 <body class="full-screen margin-sides-xxl">
-    <section class="full-screen flex-column space-between">
-        <section class="margin-top-xxl margin-sides-sm flex-column gap-md">
-            <section>
-                <div class="tab">
-                    <h4 class="titles">HUNTNGATHER</h4>
-                </div>
-                <div class="content flex-column gap-md">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempora esse nam! Labore, mollitia vitae quasi, consequatur tempore delectus cumque consectetur quae voluptas ut illum, suscipit cum libero officia a.
-                    </p>
-                </div>
-                
-                <div class="tab">
-                    <h4 class="titles">WATCH</h4>
-                </div>  
-                <div class="content flex-column gap-sm">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempora esse nam! Labore, mollitia vitae quasi, consequatur tempore delectus cumque consectetur quae voluptas ut illum, suscipit cum libero officia a.
-                    </p>
-                </div>
-
-                <div class="tab">
-                    <h4 class="titles">SEMINAR</h4>
-                </div> 
-                <div class="content">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempora esse nam! Labore, mollitia vitae quasi, consequatur tempore delectus cumque consectetur quae voluptas ut illum, suscipit cum libero officia a.
-                    </p>     
-                </div>
-
-                <div class="tab">
-                    <h4 class="titles">GESTURES</h4>
-                </div> 
-                <div class="content flex-column gap-sm">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempora esse nam! Labore, mollitia vitae quasi, consequatur tempore delectus cumque consectetur quae voluptas ut illum, suscipit cum libero officia a.
-                    </p>
-                </div>
-
-                <div class="tab">
-                    <h4 class="titles">HELLO WORLD</h4>
-                </div> 
-                <div class="content flex-row gap-sm">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempora esse nam! Labore, mollitia vitae quasi, consequatur tempore delectus cumque consectetur quae voluptas ut illum, suscipit cum libero officia a.
-                    </p>
-                </div>
-
-                <div class="tab">
-                    <h4 class="titles">WEBSITE CHECK</h4>
-                </div> 
-                <div class="content flex-column gap-sm">
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi tempora esse nam! Labore, mollitia vitae quasi, consequatur tempore delectus cumque consectetur quae voluptas ut illum, suscipit cum libero officia a.
-                    </p>
-                </div>
-            </section>
-            <div>
-                <h3>FILE: WEEK #</h3>
-            </div>
-        </section>
-
-        <section title="Go back to home directory">
-            <a href="../home.html">
-                <img id="folder-icon" class="icon-open margin-bottom-xxl margin-top-sm" src="../images/folder-open.png">
-                <h4 >HOME</h4>
-            </a>
-        </section>
+    <section class="progress-container margin-tb-xl">
+        <div class="progress-div">
+            <div class="progress-bar"> </div>
+        </div>
     </section>
+    <div>
+        <h3 class="anim-typewriter css-typing">Hello</h3>
+    </div>
+    <div class="square">
+
+    </div>
     <script src="../script.js"></script>
 </body>
 </html>
