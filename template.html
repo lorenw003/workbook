@@ -11,49 +11,12 @@
     <!--LINK TO STYLESHEET-->
     <link rel="stylesheet" href="../style.css">
 
-    <style>
-        .final-tab {
-            border: 1px solid whitesmoke;
-            border-radius: 0.5em;
-            flex: 1;
-            padding: 1em;
-        }
-
-        .modal {
-            /* display: none; */
-            position: fixed; /* Stay in place */
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%;
-            background-color: var(--colour-bg);
-            animation: closeModal 4.3s ease-in 1;
-            opacity: 0;
-        }
-
-        .frame-sm {
-            max-width: 70%;
-            margin: auto;
-            align-items: center;
-        }
-
-        .fit-content {
-            width:fit-content;
-        }
-
-        @keyframes closeModal {
-            0% {opacity: 1;}
-            90% {opacity:1; display: flex;}
-            100% {opacity:0; display: none;}
-        }
-
-    </style>
 </head>
 <body class="full-screen margin-sides-xxl">
+    <!-- MODAL -->
     <section id="loadingModal" class="modal flex-column">
         <section class="frame-sm flex-column gap-lg">
-            <h2 class="align-centre fit-content">LOADING FILE: WEEK #</h2>
+            <h2 class="align-centre fit-content">ACCESSING FILE: WEEK #</h2>
             <section class="progress-container fit-content align-centre margin-bottom-xl">
                 <div class="progress-div">
                     <div class="progress-bar"> </div>
@@ -61,7 +24,11 @@
             </section>
         </section>
     </section>
+
+    <!-- MAIN CONTENT -->
     <section class="full-screen flex-column space-between">
+
+        <!-- FOLDER -->
         <section class="margin-top-xxl margin-sides-sm flex-column gap-md">
             <div class="align-left">
                 <h3>FILE: WEEK #</h3>
@@ -127,6 +94,7 @@
         <div class="final-tab margin-sides-sm">
         </div>
 
+        <!-- LINKS -->
         <section class="flex-row gap-md margin-bottom-xl margin-top-xxl" title="Go back to home directory">
             <a class="flex-column gap-none icon-container" href="../home.html">
                 <img id="folder-icon" class="icon-folder icon-open" src="../images/folder-open.png">
@@ -134,10 +102,12 @@
             </a>
         </section>
     </section>
+
+
     <!--LINK TO JS-->
     <script src="../script.js" async></script>
     <script>
-        setTimeout(closeModal, 4200);
+        setTimeout(closeModal, 4290);
 
         function closeModal() {
             let modal = document.getElementById("loadingModal");

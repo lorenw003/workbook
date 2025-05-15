@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILE: WEEK 5</title>
 
-    <!--LINK TO JS-->
-    <script src="../script.js" async></script>
-
     <!--LINK FOR FAVICON-->
     <link rel="icon" type="image/x-icon" href="../images/folder-open.png">
 
@@ -15,6 +12,19 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body class="full-screen margin-sides-xxl">
+
+    <!-- MODAL -->
+    <section id="loadingModal" class="modal flex-column">
+        <section class="frame-sm flex-column gap-md">
+            <h2 class="align-centre fit-content">ACCESSING FILE: WEEK 5</h2>
+            <section class="progress-container fit-content align-centre margin-bottom-xl">
+                <div class="progress-div">
+                    <div class="progress-bar"> </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
     <section class="full-screen flex-column space-between">
         <section class="margin-top-xxl margin-sides-sm flex-column gap-md">
             <div class="align-left">
@@ -152,5 +162,17 @@
             </a>
         </section>
     </section>
+
+    <!--LINK TO JS-->
+    <script src="../script.js" async></script>
+    <script>
+        setTimeout(closeModal, 4300);
+
+        function closeModal() {
+            let modal = document.getElementById("loadingModal");
+            modal.style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>

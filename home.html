@@ -15,6 +15,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="home full-screen flex-column space-between">
+
+    <!-- MODAL -->
+    <section id="loadingModal" class="modal flex-column">
+        <section class="frame-sm flex-column gap-md">
+            <h2 class="align-centre fit-content">LOADING FOLDER GDES200008LW</h2>
+            <section class="progress-container fit-content align-centre margin-bottom-xl">
+                <div class="progress-div">
+                    <div class="progress-bar"> </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
     <section class="margin-sides-xxl margin-top-xxl flex-column gap-md">
         <h3>FOLDER: GDES200008LW</h3>
         <section>
@@ -120,47 +133,17 @@
                 <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
                 <h4 class="align-centre mobile-align-centre-vertical icon-label">WEEK 9</h4>
             </a>
-            <!-- <a class="flex-row mobile-column gap-sm" href="./week3/index.html">
-                <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
-                <h4 class="align-centre-vertical no-display">WEEK 3</h4>
-            </a>
-            <a class="flex-row mobile-column gap-sm" href="./week4/index.html">
-                <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
-                <h4 class="align-centre-vertical no-display">WEEK 4</h4>
-            </a>
-            <a class="flex-row mobile-column gap-sm" href="./week5/index.html">
-                <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
-                <h4 class="align-centre-vertical no-display">WEEK 5</h4>
-            </a>
-            <a class="flex-row mobile-column gap-sm" href="./week6/index.html">
-                <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
-                <h4 class="align-centre-vertical no-display">WEEK 6</h4>
-            </a>
-            <a class="flex-row mobile-column gap-sm" href="./week7/index.html">
-                <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
-                <h4 class="align-centre-vertical no-display">WEEK 7</h4>
-            </a>
-            <a class="flex-row mobile-column gap-sm" href="./week8/index.html">
-                <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
-                <h4 class="align-centre-vertical no-display">WEEK 8</h4>
-            </a>
-            <a class="flex-row mobile-column gap-sm" href="./week9/index.html">
-                <img class="demo icon-folder" src="images/folder-closed.png" width="100%">
-                <h4 class="align-centre-vertical no-display">WEEK 9</h4> -->
-            </a>
-            <!-- <a href="error.html">
-                <img class="demo" src="images/folder-closed.png" width="100%">
-                <h3 class="align-centre-vertical no-display">WEEK 1</h3>
-            </a>
-            <a href="error.html">
-                <img class="demo" src="images/folder-closed.png" width="100%">
-                <h3 class="align-centre-vertical no-display">WEEK 1</h3>
-            </a>
-            <a href="error.html">
-                <img class="demo" src="images/folder-closed.png" width="100%">
-                <h3 class="align-centre-vertical no-display">WEEK 1</h3>
-            </a> -->
         </section>
     </section>
+    <!--LINK TO JS-->
+    <script src="../script.js" async></script>
+    <script>
+        setTimeout(closeModal, 4300);
+
+        function closeModal() {
+            let modal = document.getElementById("loadingModal");
+            modal.style.display = 'none';
+        }
+    </script>
 </body>
 </html>

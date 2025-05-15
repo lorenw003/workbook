@@ -4,12 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILE: WEEK 4</title>
-    <script src="../script.js" async></script>
+
+    <!--LINK FOR FAVICON-->
     <link rel="icon" type="image/x-icon" href="../images/folder-open.png">
+
+    <!--LINK FOR STYLESHEET-->
     <link rel="stylesheet" href="../style.css">
 
 </head>
 <body class="full-screen margin-sides-xxl">
+
+    <!-- MODAL -->
+    <section id="loadingModal" class="modal flex-column">
+        <section class="frame-sm flex-column gap-md">
+            <h2 class="align-centre fit-content">ACCESSING FILE: WEEK 4</h2>
+            <section class="progress-container fit-content align-centre margin-bottom-xl">
+                <div class="progress-div">
+                    <div class="progress-bar"> </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
     <section class="full-screen flex-column space-between">
         <section class="margin-top-xxl margin-sides-sm flex-column gap-md">
             <div class="align-left">
@@ -233,15 +249,18 @@
                 <h4 class="align-centre no-textdecoration icon-label">KUSAMA</h4>
             </a>
         </section>
-
-        <!-- <section>
-
-            <div class="margin-bottom-xxl margin-top-sm">
-                <a href="../home.html"><img id="folder-icon" class="icon-open icon-folder" src="../images/folder-open.png"></a>
-                <a href="week4_portrait/index.html"><img class="icon-file" src="../images/File.png"></a>
-                <a href="week4_kusama/index.html"><img class="icon-file" src="../images/File.png"></a>
-            </div>
-        </section> -->
     </section>
+
+    <!--LINK TO JS-->
+    <script src="../script.js" async></script>
+    <script>
+        setTimeout(closeModal, 4300);
+
+        function closeModal() {
+            let modal = document.getElementById("loadingModal");
+            modal.style.display = 'none';
+        }
+    </script>
+
 </body>
 </html>
