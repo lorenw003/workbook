@@ -123,6 +123,16 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
+// THIS IS SUPER DODGY please don't judge
+function checkPassword() {
+    var password = document.getElementById("passwordInput").value;
+    if (password == "loren is a great student" || password == "lorenisagreatstudent") {
+        window.location.href = "accessGranted.html"
+    } else {
+        window.location.href = "accessDenied.html"
+    }
+}
+
 //SHOW LABELS
 // let labels = document.getElementsByClassName("mylabel")
 // let containers = document.getElementsByClassName("icon-container")

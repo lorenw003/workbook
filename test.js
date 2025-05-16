@@ -44,7 +44,7 @@ function setup() {
   rowDiv.id("row-div");
   rowDiv.addClass("flex-row");
   rowDiv.addClass("space-between");
-  rowDiv.addClass("margin-sides-xxxl");
+  rowDiv.addClass("align-centre");
   rowDiv.addClass("text-wrapper-xs");
   
   yesPointer = createElement('h2', '>');
@@ -56,9 +56,9 @@ function setup() {
   noPointer.addClass("hidden");
   noPointer.addClass("pointers");
   
-  let yesText = createElement('h2', 'YES');
+  let yesText = createElement('h3', 'YES');
   
-  let noText = createElement('h2', 'NO');
+  let noText = createElement('h3', 'NO');
   
   let yesDiv = createDiv();
   yesDiv.id("yes-div");
@@ -124,7 +124,7 @@ function checkMessage() {
 function typeMessage () {
   //This code was taken and modified from https://editor.p5js.org/xc2736/sketches/1igkPpfX5
   
-  textSize(resizeText(4));
+  textSize(resizeText(3));
   fill("white");
   text(textToShow, width/3.5, height - 30);
   frameRate(30); 
@@ -187,8 +187,17 @@ function redirect() {
 
 //RESIZES TEXT FOR BROWSER
 function resizeText(baseTextSize) {
-  scaleFactor = width/300;
-  return baseTextSize * scaleFactor;
+  scaleFactor = width/200;
+  let textSize = baseTextSize * scaleFactor
+
+  if (textSize < 14) {
+    return 14;
+  } else {
+    return textSize;
+  }
+
+  // console.log(baseTextSize * scaleFactor);
+  // return baseTextSize * scaleFactor;
   //map function
   //or add if
 }

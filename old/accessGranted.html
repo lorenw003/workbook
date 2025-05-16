@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+
+    <!--LINK FOR FAVICON-->
+    <link rel="icon" type="image/x-icon" href="../images/folder-closed.png">
+
+    <!--LINK TO STYLESHEET-->
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+<body class="full-height flex-column">
+    <!-- MODAL -->
+    <section id="loadingModal" class="modal typed-slow flex-column">
+        <section class="frame-sm flex-column gap-md">
+            <h2 class="align-centre margin-sides-xl">
+                <span class="typewrite wrap align-centre" data-period="2000" data-type='["REQUESTING ACCESS TO FILE GDES20008LW"]'></span>
+            </h2>
+            <section class="progress-container fit-content align-centre margin-bottom-xl">
+                    <div class="progress-div">
+                        <div class="progress-bar veryslow"> </div>
+                    </div>
+            </section>
+        </section>
+    </section>
+
+    <section class="frame-sm flex-column gap-xl">
+        <h2 class="align-centre margin-sides-xl green">
+             ACCESS GRANTED
+        </h2>
+        <div class="align-centre margin-bottom-xl">
+            <a href="accessGranted.html" class="flex-row margin-sides-xl no-textdecoration pointer-container">
+                <h2 class="pointers">></h2>
+                <h2 class="options">CONTINUE</h2>
+            </a>
+        </div>
+    </section>
+</body>
+<script src="../typing.js"></script>
+<script src="../script.js"></script>
+<script>
+        setTimeout(closeModal, 5100);
+</script>
+</html>

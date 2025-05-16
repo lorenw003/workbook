@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>...</title>
+
+    <!--LINK FOR FAVICON-->
+    <link rel="icon" type="image/x-icon" href="../images/folder-closed.png">
+
+    <!--LINK TO STYLESHEET-->
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .input {
+            border: 1px solid white;
+            background-color: var(--colour-bg);
+            color: white;
+
+            width: 30vw;
+            min-width: 150px; 
+        }
+
+        .input:focus {
+            outline: none;
+        }
+
+        .button:hover {
+            color: grey;
+        }
+
+    </style>
+
+</head>
+<body class="full-height flex-column">
+    <section class="frame-sm flex-column gap-xl">
+        <h2 class="align-centre margin-sides-xl">
+             <span class="typewrite wrap align-centre" data-period="2000" data-type='["ENTER PASSWORD"]'></span>
+        </h2>
+        <form class="flex-column gap-md margin-bottom-xxl" >
+            <input id="passwordInput" type="text" name="password" class="input padding-sides-sm">
+            <h2 class="button align-centre" onclick="checkPassword()">SUBMIT</h3>
+        </form>
+    </section>
+</body>
+<script src="../typing.js"></script>
+<script src="../script.js"></script>
+</html>
