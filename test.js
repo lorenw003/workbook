@@ -21,6 +21,23 @@ function setup() {
   
   let typeDiv = createDiv();
   typeDiv.id("type-div");
+
+  let progressSection = createDiv();
+  progressSection.id("progress-Section");
+  progressSection.addClass("progress-container");
+  progressSection.addClass("align-centre");
+  progressSection.addClass("no-display");
+
+
+  let progressDiv = createDiv();
+  progressDiv.id("progress-Div");
+  progressDiv.addClass("progress-div");
+
+
+  let progressBar = createDiv();
+  progressBar.id("progress-Bar");
+  progressBar.addClass("progress-bar");
+
   
   //CREATES DIV AND HTML ELEMENTS TO INTERACT WITH
   rowDiv = createDiv();
@@ -64,12 +81,18 @@ function setup() {
   
   //ADDING DIVS TO EACHOTHER TO CREATE LAYOUT
   typeDiv.child(canvas);
+
+  progressSection.child(progressDiv);
+  progressDiv.child(progressBar);
+
   rowDiv.child(yesDiv);
   rowDiv.child(noDiv);
   yesDiv.child(yesPointer);
   yesDiv.child(yesText);
   noDiv.child(noPointer);
   noDiv.child(noText);
+
+
   
   
 }
@@ -150,6 +173,10 @@ function resetType () {
 // HIDES YES AND NO BUTTONS
 function hideControls () {
   rowDiv.style('display', 'none');
+}
+
+function showBar () {
+  progressSection.style('display', 'block');
 }
 
 //REDIRECTS TO HOME PAGE
