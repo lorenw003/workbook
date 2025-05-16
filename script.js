@@ -117,6 +117,12 @@ function openFolder(evt) {
     evt.target.src = "../images/folder-open.png";
 }
 
+//MODAL
+function closeModal() {
+    let modal = document.getElementById("loadingModal");
+    modal.style.display = 'none';
+}
+
 //SHOW LABELS
 // let labels = document.getElementsByClassName("mylabel")
 // let containers = document.getElementsByClassName("icon-container")
