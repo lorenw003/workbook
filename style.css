@@ -119,6 +119,27 @@ a, .tabs, .grabber {
 }
 
 
+
+
+/* INPUT AND BUTTONS */
+.input {
+    border: 1px solid white;
+    background-color: var(--colour-bg);
+    color: white;
+
+    width: 30vw;
+    min-width: 150px; 
+}
+
+.input:focus {
+    outline: none;
+}
+
+.button:hover {
+    color: grey;
+}
+
+
 /*LAYOUT*/
 .flex-row{
     display: flex;
@@ -511,6 +532,9 @@ ol {
     width:fit-content;
 }
 
+.min-content {
+    width: min-content;
+}
 
 
 
@@ -847,6 +871,12 @@ ol {
     .full-screen.margin-sides-xxl {
         margin-left: var(--spacing-lg);
         margin-right: var(--spacing-lg);
+    }
+}
+
+@media (max-width: 500) {
+    .min-content-mobile {
+        width: min-content;
     }
 }
 
