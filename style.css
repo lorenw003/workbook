@@ -74,7 +74,7 @@
     padding: 0px;
 }
 
-body {
+body, input, button {
     font-size: 10px;
     line-height: 1.5rem;
 
@@ -97,6 +97,26 @@ a, .tabs, .grabber {
 }
 
 
+
+
+/* TYPES */
+
+.green {
+    color: chartreuse;
+    animation-fill-mode: both;
+}
+
+.red {
+    color: red;
+    animation: flashing 1s 9;
+    animation-fill-mode: both;
+}
+
+@keyframes flashing {
+   0% { opacity: 1 }
+   50% { opacity: 0 }
+   100% { opacity: 1 }
+}
 
 
 /*LAYOUT*/
@@ -635,7 +655,7 @@ ol {
 }
 
 .veryslow {
-    animation: expandWidth 7.5s ease-in-out 1;
+    animation: expandWidth 5s ease-in-out 1;
 }
 
 .slow {
@@ -651,7 +671,7 @@ ol {
 }
 
 
-
+/* MODAL */
 .modal {
     /* display: none; */
     position: fixed; /* Stay in place */
@@ -665,10 +685,36 @@ ol {
     opacity: 0;
 }
 
+.modal.typed-slow {
+    animation: closeModal 5.1s ease-in 1;
+}
+
 @keyframes closeModal {
     0% {opacity: 1;}
     90% {opacity:1; display: flex;}
     100% {opacity:0; display: none;}
+}
+
+
+/* OPENING SEQUENCE */
+.pointer-container:hover > .pointers {
+    visibility: visible;
+}
+
+.pointer-container > .pointers {
+    visibility: hidden;
+}
+
+.wrap {
+    border-right: 0.08em solid #fff; 
+    animation: caret 1s steps(1) infinite;
+    width:max-content;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
 }
 
 
