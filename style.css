@@ -611,7 +611,19 @@ ol {
 .progress-bar {
     background-color: white;
     height: 100%;
+    /* animation: expandWidth 4s ease-in-out 1; */
+}
+
+.veryslow {
+    animation: expandWidth 7.5s ease-in-out 1;
+}
+
+.slow {
     animation: expandWidth 4s ease-in-out 1;
+}
+
+.average {
+    animation: expandWidth 3s ease-in-out 1;
 }
 
 .progress-div {
